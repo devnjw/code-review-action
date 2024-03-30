@@ -1,6 +1,9 @@
-#!/bin/sh -l
+#!/bin/sh
 
-echo "Hello $1"
-time=$(date)
-echo "time=$time" >> $GITHUB_OUTPUT
+set -e
 
+# Fetch the PR branch
+git fetch origin pull/$1/head:pr-$1
+
+# Print the diff
+git diff HEAD...pr-$1
