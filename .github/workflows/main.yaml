@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: devnjw/code-review-action@v0.1
+        uses: devnjw/code-review-action@v0.2
         with:
           who-to-greet: 'Nolan'
       # Use the output from the `hello` step
