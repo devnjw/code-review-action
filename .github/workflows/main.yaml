@@ -7,5 +7,9 @@ jobs:
   print-diff:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Print PR Diff
         uses: devnjw/code-review-action@v0.2
+        with:
+          fetch-depth: 0

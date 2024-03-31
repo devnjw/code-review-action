@@ -3,3 +3,5 @@ description: 'Prints the diff of a pull request'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    GITHUB_WORKSPACE: ${{ github.workspace }}
